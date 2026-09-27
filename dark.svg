@@ -1,12 +1,16 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1180" height="610" viewBox="0 0 1180 610" role="img" aria-label="K.R. Sai Varun — Full-Stack Developer and AI Application Builder. Terminal-style hero banner.">
+<svg xmlns="http://www.w3.org/2000/svg" width="1180" height="610" viewBox="0 0 1180 610" role="img" aria-label="K.R. Sai Varun — Full-Stack Developer and AI Application Builder. Terminal-style hero banner with ASCII portrait.">
   <defs>
-    <!-- Background gradients -->
     <radialGradient id="d_bgGlow1" cx="20%" cy="15%" r="60%">
       <stop offset="0%" stop-color="#7C3AED" stop-opacity="0.18"/>
       <stop offset="100%" stop-color="#030712" stop-opacity="0"/>
     </radialGradient>
     <radialGradient id="d_bgGlow2" cx="85%" cy="80%" r="55%">
       <stop offset="0%" stop-color="#22D3EE" stop-opacity="0.14"/>
+      <stop offset="100%" stop-color="#030712" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="d_faceGlow" cx="50%" cy="42%" r="52%">
+      <stop offset="0%" stop-color="#22D3EE" stop-opacity="0.22"/>
+      <stop offset="70%" stop-color="#7C3AED" stop-opacity="0.08"/>
       <stop offset="100%" stop-color="#030712" stop-opacity="0"/>
     </radialGradient>
     <linearGradient id="d_frameStroke" x1="0" y1="0" x2="1" y2="1">
@@ -18,24 +22,15 @@
       <stop offset="0%" stop-color="#0F172A" stop-opacity="0.92"/>
       <stop offset="100%" stop-color="#07111F" stop-opacity="0.96"/>
     </linearGradient>
-    <linearGradient id="d_accentLine" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#22D3EE" stop-opacity="0"/>
-      <stop offset="50%" stop-color="#22D3EE" stop-opacity="0.85"/>
-      <stop offset="100%" stop-color="#7C3AED" stop-opacity="0"/>
-    </linearGradient>
     <linearGradient id="d_scanGrad" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#22D3EE" stop-opacity="0"/>
       <stop offset="50%" stop-color="#22D3EE" stop-opacity="0.5"/>
       <stop offset="100%" stop-color="#22D3EE" stop-opacity="0"/>
     </linearGradient>
-    <linearGradient id="d_portraitMask" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#22D3EE" stop-opacity="0.9"/>
-      <stop offset="100%" stop-color="#7C3AED" stop-opacity="0.85"/>
-    </linearGradient>
     <linearGradient id="d_highlightSweep" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0%" stop-color="#22D3EE" stop-opacity="0"/>
       <stop offset="45%" stop-color="#22D3EE" stop-opacity="0"/>
-      <stop offset="50%" stop-color="#22D3EE" stop-opacity="0.12"/>
+      <stop offset="50%" stop-color="#22D3EE" stop-opacity="0.14"/>
       <stop offset="55%" stop-color="#22D3EE" stop-opacity="0"/>
       <stop offset="100%" stop-color="#22D3EE" stop-opacity="0"/>
       <animateTransform attributeName="gradientTransform" type="translate" values="-1 -1; 1 1" dur="10s" repeatCount="indefinite"/>
@@ -46,14 +41,6 @@
     <pattern id="d_scanlines" width="4" height="4" patternUnits="userSpaceOnUse">
       <rect width="4" height="1" fill="#22D3EE" opacity="0.03"/>
     </pattern>
-    <filter id="d_softGlow" x="-50%" y="-50%" width="200%" height="200%">
-      <feGaussianBlur stdDeviation="3" result="b"/>
-      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
-    </filter>
-    <filter id="d_strongGlow" x="-50%" y="-50%" width="200%" height="200%">
-      <feGaussianBlur stdDeviation="6" result="b"/>
-      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
-    </filter>
     <clipPath id="d_outerClip">
       <rect x="0" y="0" width="1180" height="610" rx="22" ry="22"/>
     </clipPath>
@@ -62,12 +49,8 @@
         <animate attributeName="height" from="0" to="340" dur="1.4s" begin="0.2s" fill="freeze" calcMode="spline" keySplines="0.22 1 0.36 1" keyTimes="0;1"/>
       </rect>
     </clipPath>
-    <mask id="d_portraitFade">
-      <rect x="60" y="150" width="360" height="360" fill="white"/>
-    </mask>
   </defs>
 
-  <!-- Background -->
   <g clip-path="url(#d_outerClip)">
     <rect width="1180" height="610" fill="#030712"/>
     <rect width="1180" height="610" fill="url(#d_bgGlow1)"/>
@@ -75,7 +58,6 @@
     <rect width="1180" height="610" fill="url(#d_grid)"/>
     <rect width="1180" height="610" fill="url(#d_scanlines)"/>
 
-    <!-- Drifting particles -->
     <circle cx="100" cy="500" r="1.2" fill="#22D3EE" opacity="0">
       <animate attributeName="opacity" values="0;0.3;0" dur="18s" repeatCount="indefinite"/>
       <animateTransform attributeName="transform" type="translate" values="0 0; 12 -8; 0 0" dur="18s" repeatCount="indefinite"/>
@@ -89,11 +71,9 @@
       <animateTransform attributeName="transform" type="translate" values="0 0; 8 -10; 0 0" dur="20s" begin="8s" repeatCount="indefinite"/>
     </circle>
 
-    <!-- Outer frame -->
     <rect x="14" y="14" width="1152" height="582" rx="20" ry="20" fill="none" stroke="url(#d_frameStroke)" stroke-width="1.2"/>
     <rect x="20" y="20" width="1140" height="570" rx="16" ry="16" fill="none" stroke="#1E293B" stroke-width="0.6"/>
 
-    <!-- Terminal header bar -->
     <rect x="20" y="20" width="1140" height="40" rx="16" ry="16" fill="#0B1220" opacity="0.95"/>
     <rect x="20" y="44" width="1140" height="16" fill="#0B1220" opacity="0.95"/>
     <circle cx="46" cy="40" r="5.5" fill="#EF4444"/>
@@ -103,75 +83,97 @@
     <text x="1120" y="45" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="10" fill="#22D3EE" letter-spacing="2">[ PROFILE ]</text>
     <line x1="20" y1="60" x2="1160" y2="60" stroke="#1E293B" stroke-width="0.8"/>
 
-    <!-- ============ LEFT COLUMN — VISUAL.IDENTITY ============ -->
-    <!-- Portrait panel -->
+    <!-- ============ LEFT COLUMN — VISUAL.IDENTITY (ASCII PORTRAIT) ============ -->
     <rect x="60" y="100" width="360" height="420" rx="14" ry="14" fill="url(#d_panelFill)" stroke="#1E293B" stroke-width="1"/>
     <rect x="60" y="100" width="360" height="420" rx="14" ry="14" fill="none" stroke="#22D3EE" stroke-opacity="0.18" stroke-width="1"/>
+    <rect x="60" y="140" width="360" height="340" fill="url(#d_faceGlow)"/>
 
-    <!-- Panel header -->
     <text x="80" y="126" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="10" fill="#22D3EE" letter-spacing="2">VISUAL.IDENTITY</text>
     <line x1="80" y1="136" x2="400" y2="136" stroke="#1E293B" stroke-width="0.6"/>
 
-    <!-- ASCII Portrait (character-based, dense ramp, recognizable silhouette) -->
+    <!-- ASCII PORTRAIT — character-based conversion, monospace, ramp: .·:+*#%@ -->
     <g clip-path="url(#d_scanReveal)">
-      <g font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="9" fill="#22D3EE" opacity="0.95">
-        <!-- Row 1 -->
-        <text x="80" y="162" letter-spacing="3.5">      ..::;;+*#%%%#*+;::..</text>
-        <!-- Row 2 -->
-        <text x="80" y="174" letter-spacing="3.5">    .:+*#%%%%%%%%%%%%%#*+:.</text>
-        <!-- Row 3 -->
-        <text x="80" y="186" letter-spacing="3.5">  .:+##%%%%%%%%%%%%%%%%%%%%##+:.</text>
-        <!-- Row 4 -->
-        <text x="80" y="198" letter-spacing="3.5"> .:+##%%%%%%%%%%%%%%%%%%%%%%%%##+:.</text>
-        <!-- Row 5 -->
-        <text x="80" y="210" letter-spacing="3.5"> :+##%%%%%%%%%%%%%%%%%%%%%%%%%%%%##+:</text>
-        <!-- Row 6 -->
-        <text x="80" y="222" letter-spacing="3.5">+##%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%##+</text>
-        <!-- Row 7 -->
-        <text x="80" y="234" letter-spacing="3.5">##%%%%%#*+;:.....::;+*#%%%%%%%%%%%%%%%##</text>
-        <!-- Row 8 -->
-        <text x="80" y="246" letter-spacing="3.5">##%%%*:...............:*%%%%%%%%%%%%%%%##</text>
-        <!-- Row 9 -->
-        <text x="80" y="258" letter-spacing="3.5">##%#:....................:#%%%%%%%%%%%%%##</text>
-        <!-- Row 10 -->
-        <text x="80" y="270" letter-spacing="3.5">##%:.......................:%%%%%%%%%%%%%##</text>
-        <!-- Row 11 — eyes row -->
-        <text x="80" y="282" letter-spacing="3.5">##%:..:+#*:.......:*#+:...:%%%%%%%%%%%%%##</text>
-        <!-- Row 12 -->
-        <text x="80" y="294" letter-spacing="3.5">##%:..:*#%*:.....:*#%*:...:%%%%%%%%%%%%%##</text>
-        <!-- Row 13 -->
-        <text x="80" y="306" letter-spacing="3.5">##%:.....:.........:.....:%=============%%#</text>
-        <!-- Row 14 — nose/cheeks -->
-        <text x="80" y="318" letter-spacing="3.5">##%%:...................:%%%%%%%%%%%%%%%##</text>
-        <!-- Row 15 -->
-        <text x="80" y="330" letter-spacing="3.5">##%%%:.................:%%%%%%%%%%%%%%%%%%##</text>
-        <!-- Row 16 — mouth -->
-        <text x="80" y="342" letter-spacing="3.5">##%%%%%*:...........:*%%%%%%%%%%%%%%%%%%%%##</text>
-        <!-- Row 17 — chin -->
-        <text x="80" y="354" letter-spacing="3.5">##%%%%%%%%#*+;:...:;+*#%%%%%%%%%%%%%%%%%%%%##</text>
-        <!-- Row 18 — neck -->
-        <text x="80" y="366" letter-spacing="3.5">##%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%##</text>
-        <!-- Row 19 — shoulders begin -->
-        <text x="80" y="378" letter-spacing="3.5">##%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%##</text>
-        <!-- Row 20 — shoulders -->
-        <text x="80" y="390" letter-spacing="3.5">#%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%#</text>
-        <!-- Row 21 — shirt collar -->
-        <text x="80" y="402" letter-spacing="3.5">#%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%#</text>
-        <!-- Row 22 -->
-        <text x="80" y="414" letter-spacing="3.5">#%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%#</text>
-        <!-- Row 23 -->
-        <text x="80" y="426" letter-spacing="3.5">#%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%#</text>
-        <!-- Row 24 -->
-        <text x="80" y="438" letter-spacing="3.5">#%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%#</text>
-        <!-- Row 25 -->
-        <text x="80" y="450" letter-spacing="3.5">#%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%#</text>
-        <!-- Row 26 -->
-        <text x="80" y="462" letter-spacing="3.5">#%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%#</text>
-        <!-- Row 27 -->
-        <text x="80" y="474" letter-spacing="3.5">#%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%#</text>
-        <!-- Row 28 -->
-        <text x="80" y="486" letter-spacing="3.5">#%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%#</text>
+      <!-- Soft face glow behind portrait -->
+      <ellipse cx="240" cy="290" rx="118" ry="150" fill="#22D3EE" opacity="0.05"/>
+      <ellipse cx="240" cy="300" rx="80" ry="105" fill="#7C3AED" opacity="0.05"/>
+
+      <!-- ASCII portrait body — dense monospace glyphs -->
+      <g font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="8.2" fill="#E2E8F0" opacity="0.96" letter-spacing="0.4">
+        <!-- Row 01 — hair crown -->
+        <text x="80" y="158">             .:;+*#%@%#*+;:.</text>
+        <!-- Row 02 -->
+        <text x="80" y="169">           .:+*#%@@@@@@@@@%#*+:</text>
+        <!-- Row 03 -->
+        <text x="80" y="180">         .:+*%@@@@@@@@@@@@@@@%#+:</text>
+        <!-- Row 04 -->
+        <text x="80" y="191">       .:+%@@@@@@@@@@@@@@@@@@@@@%+:</text>
+        <!-- Row 05 -->
+        <text x="80" y="202">      .:+%@@@@@@@@@@@@@@@@@@@@@@@%+:</text>
+        <!-- Row 06 -->
+        <text x="80" y="213">     .:+%@@@@@@@@@@@@@@@@@@@@@@@@@%+:</text>
+        <!-- Row 07 -->
+        <text x="80" y="224">    .:+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@+:</text>
+        <!-- Row 08 — hairline -->
+        <text x="80" y="235">    .:*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*:</text>
+        <!-- Row 09 — forehead top -->
+        <text x="80" y="246">    .:+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@+.</text>
+        <!-- Row 10 — forehead -->
+        <text x="80" y="257">     .:*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@#:</text>
+        <!-- Row 11 — forehead -->
+        <text x="80" y="268">      .:*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@#:</text>
+        <!-- Row 12 — forehead lower -->
+        <text x="80" y="279">       .:*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@#:.</text>
+        <!-- Row 13 — brow -->
+        <text x="80" y="290">        .:*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@+.</text>
+        <!-- Row 14 — brow left -->
+        <text x="80" y="301">         .:*@@@@@@#*+;:....:;+*#@@@@@@@@@@@+.</text>
+        <!-- Row 15 — eyes -->
+        <text x="80" y="312">          .:+@@@@*:...........:+@@@@@@@@@+.</text>
+        <!-- Row 16 — eyes / pupils -->
+        <text x="80" y="323">           .:*@@@+..:=%@@=.....:*@@@@@@@@+.</text>
+        <!-- Row 17 — eyes lower -->
+        <text x="80" y="334">           .:+@@@#:.:+*+=:.....:#@@@@@@@@#.</text>
+        <!-- Row 18 — under-eye -->
+        <text x="80" y="345">            .:*@@@%:..........:#@@@@@@@@#.</text>
+        <!-- Row 19 — nose bridge -->
+        <text x="80" y="356">             .:*@@@%*:......:+%@@@@@@@@@#.</text>
+        <!-- Row 20 — nose -->
+        <text x="80" y="367">              .:+%@@@@#+;:..:+%@@@@@@@@@@#.</text>
+        <!-- Row 21 — nose tip -->
+        <text x="80" y="378">               .:+%@@@@@@%#*+#@@@@@@@@@@@#.</text>
+        <!-- Row 22 — moustache -->
+        <text x="80" y="389">                .:=%@@@@@@@@@@@@@@@@@@@@@@%*.</text>
+        <!-- Row 23 — moustache / lip -->
+        <text x="80" y="400">                 .:=%@@@@@@@@@@@@@@@@@@@@@%*.</text>
+        <!-- Row 24 — mouth -->
+        <text x="80" y="411">                  .:+%@@@@@@@@@@@@@@@@@@@@%+.</text>
+        <!-- Row 25 — chin -->
+        <text x="80" y="422">                   .:*@@@@@@@@@@@@@@@@@@@@#:.</text>
+        <!-- Row 26 — chin lower -->
+        <text x="80" y="433">                    .:*@@@@@@@@@@@@@@@@@@#:.</text>
+        <!-- Row 27 — jaw -->
+        <text x="80" y="444">                     .:+%@@@@@@@@@@@@@@@%+.</text>
+        <!-- Row 28 — jaw/neck -->
+        <text x="80" y="455">                      .:=%@@@@@@@@@@@@@%+.</text>
+        <!-- Row 29 — neck -->
+        <text x="80" y="466">                       .:=%@@@@@@@@@@@%+.</text>
+        <!-- Row 30 — neck/collar -->
+        <text x="80" y="477">                      ..:=#@@@@@@@@@@@@@%*=..</text>
+        <!-- Row 31 — grey inner collar -->
+        <text x="80" y="488">                   ..:=+*@@@@@@@@@@@@@@@@%*=:..</text>
+        <!-- Row 32 — black shirt collar -->
+        <text x="80" y="499">                ..:=+*%@@@@@@@@@@@@@@@@@@@@%*=:..</text>
+        <!-- Row 33 — shoulders -->
+        <text x="80" y="510">             ..:=+*#%@@@@@@@@@@@@@@@@@@@@@@@@%#*=:..</text>
+        <!-- Row 34 — shoulders lower -->
+        <text x="80" y="521">          ..:=+*#%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@%#*=:..</text>
+        <!-- Row 35 — shoulders base -->
+        <text x="80" y="532">       ..:=+*#%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@%#*=:..</text>
       </g>
+
+      <!-- Cursor element for scan typing effect -->
+      <rect x="80" y="150" width="0" height="0" fill="#22D3EE"/>
+
       <!-- Highlight sweep overlay -->
       <rect x="60" y="150" width="360" height="340" fill="url(#d_highlightSweep)" opacity="0.6"/>
     </g>
@@ -182,18 +184,15 @@
       <animate attributeName="opacity" values="0; 0.35; 0.35; 0" dur="6s" begin="2s" repeatCount="indefinite" keyTimes="0;0.1;0.8;1"/>
     </rect>
 
-    <!-- Terminal command under portrait -->
     <text x="80" y="510" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="10" fill="#94A3B8">
       <tspan fill="#10B981">sai@github</tspan><tspan fill="#64748B">:</tspan><tspan fill="#22D3EE">~</tspan><tspan fill="#64748B">$ </tspan><tspan fill="#F8FAFC">whoami</tspan>
     </text>
     <text x="80" y="526" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="11" fill="#22D3EE" font-weight="700">K.R. SAI VARUN</text>
 
     <!-- ============ RIGHT COLUMN — SYSTEM.INFO ============ -->
-    <!-- Panel -->
     <rect x="450" y="100" width="670" height="420" rx="14" ry="14" fill="url(#d_panelFill)" stroke="#1E293B" stroke-width="1"/>
     <rect x="450" y="100" width="670" height="420" rx="14" ry="14" fill="none" stroke="#22D3EE" stroke-opacity="0.18" stroke-width="1"/>
 
-    <!-- Panel header -->
     <text x="472" y="126" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="10" fill="#22D3EE" letter-spacing="2">SYSTEM.INFO</text>
     <text x="1098" y="126" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="10" fill="#10B981">● ONLINE</text>
     <circle cx="1088" cy="122" r="3.5" fill="#10B981">
@@ -202,97 +201,72 @@
     </circle>
     <line x1="472" y1="136" x2="1098" y2="136" stroke="#1E293B" stroke-width="0.6"/>
 
-    <!-- Name -->
     <text x="472" y="170" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="26" fill="#F8FAFC" font-weight="700" letter-spacing="1">K.R. Sai Varun</text>
     <text x="472" y="194" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13" fill="#22D3EE" letter-spacing="0.5">Full-Stack Developer · AI Application Builder</text>
 
-    <!-- Divider -->
     <line x1="472" y1="212" x2="1098" y2="212" stroke="#1E293B" stroke-width="0.6"/>
-    <line x1="472" y1="212" x2="472" y2="212" stroke="url(#d_accentLine)" stroke-width="1.5"/>
 
-    <!-- SYSTEM.INFO rows -->
     <g font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="12">
-      <!-- Row 1: ROLE -->
       <text x="472" y="240" fill="#64748B">&gt; ROLE</text>
       <text x="600" y="240" fill="#F8FAFC">Full-Stack Developer</text>
-      <animate attributeName="opacity" from="0" to="1" dur="0.4s" begin="3.0s" fill="freeze"/>
 
-      <!-- Row 2: FOCUS -->
       <text x="472" y="266" fill="#64748B">&gt; FOCUS</text>
       <text x="600" y="266" fill="#F8FAFC">Backend · Web · AI / Data</text>
 
-      <!-- Row 3: STACK -->
       <text x="472" y="292" fill="#64748B">&gt; STACK</text>
       <text x="600" y="292" fill="#F8FAFC">Python · Django · React · SQL</text>
 
-      <!-- Row 4: BUILDING -->
       <text x="472" y="318" fill="#64748B">&gt; BUILDING</text>
       <text x="600" y="318" fill="#F8FAFC">Full-stack &amp; AI-powered applications</text>
 
-      <!-- Row 5: LEARNING -->
       <text x="472" y="344" fill="#64748B">&gt; LEARNING</text>
       <text x="600" y="344" fill="#F8FAFC">TypeScript · AWS · Docker · GraphQL</text>
 
-      <!-- Row 6: EDUCATION -->
       <text x="472" y="370" fill="#64748B">&gt; EDUCATION</text>
       <text x="600" y="370" fill="#F8FAFC">MCA (Pursuing) · BCA Graduate</text>
 
-      <!-- Row 7: LOCATION -->
       <text x="472" y="396" fill="#64748B">&gt; LOCATION</text>
       <text x="600" y="396" fill="#F8FAFC">Bengaluru, India</text>
 
-      <!-- Row 8: CONTACT -->
       <text x="472" y="422" fill="#64748B">&gt; CONTACT</text>
       <text x="600" y="422" fill="#22D3EE">krsaivarun@gmail.com</text>
     </g>
 
-    <!-- Stack pills -->
     <g font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="10">
-      <!-- Python -->
       <rect x="472" y="446" width="72" height="22" rx="11" fill="#0B1220" stroke="#22D3EE" stroke-opacity="0.4" stroke-width="0.8">
         <animateTransform attributeName="transform" type="translate" values="0 0; 0 -1; 0 0; 0 1; 0 0" dur="4s" repeatCount="indefinite"/>
       </rect>
       <text x="508" y="461" text-anchor="middle" fill="#22D3EE">Python</text>
 
-      <!-- Django -->
       <rect x="552" y="446" width="68" height="22" rx="11" fill="#0B1220" stroke="#10B981" stroke-opacity="0.4" stroke-width="0.8">
         <animateTransform attributeName="transform" type="translate" values="0 0; 0 -1; 0 0; 0 1; 0 0" dur="4.4s" begin="0.3s" repeatCount="indefinite"/>
       </rect>
       <text x="586" y="461" text-anchor="middle" fill="#10B981">Django</text>
 
-      <!-- React -->
       <rect x="628" y="446" width="62" height="22" rx="11" fill="#0B1220" stroke="#7C3AED" stroke-opacity="0.4" stroke-width="0.8">
         <animateTransform attributeName="transform" type="translate" values="0 0; 0 -1; 0 0; 0 1; 0 0" dur="4.8s" begin="0.6s" repeatCount="indefinite"/>
       </rect>
       <text x="659" y="461" text-anchor="middle" fill="#A78BFA">React</text>
 
-      <!-- SQL -->
       <rect x="698" y="446" width="52" height="22" rx="11" fill="#0B1220" stroke="#F59E0B" stroke-opacity="0.4" stroke-width="0.8">
         <animateTransform attributeName="transform" type="translate" values="0 0; 0 -1; 0 0; 0 1; 0 0" dur="5.2s" begin="0.9s" repeatCount="indefinite"/>
       </rect>
       <text x="724" y="461" text-anchor="middle" fill="#FBBF24">SQL</text>
 
-      <!-- Flask -->
       <rect x="758" y="446" width="62" height="22" rx="11" fill="#0B1220" stroke="#22D3EE" stroke-opacity="0.4" stroke-width="0.8">
         <animateTransform attributeName="transform" type="translate" values="0 0; 0 -1; 0 0; 0 1; 0 0" dur="5.6s" begin="1.2s" repeatCount="indefinite"/>
       </rect>
       <text x="789" y="461" text-anchor="middle" fill="#22D3EE">Flask</text>
 
-      <!-- REST APIs -->
       <rect x="828" y="446" width="82" height="22" rx="11" fill="#0B1220" stroke="#10B981" stroke-opacity="0.4" stroke-width="0.8">
         <animateTransform attributeName="transform" type="translate" values="0 0; 0 -1; 0 0; 0 1; 0 0" dur="6s" begin="1.5s" repeatCount="indefinite"/>
       </rect>
       <text x="869" y="461" text-anchor="middle" fill="#10B981">REST APIs</text>
     </g>
 
-    <!-- Currently building / status -->
     <text x="472" y="496" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="10" fill="#64748B" letter-spacing="2">CURRENTLY BUILDING</text>
     <text x="472" y="514" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="11" fill="#F8FAFC">Full-stack applications · AI-powered tools</text>
 
-    <!-- Blinking cursor at bottom -->
-    <rect x="472" y="504" width="0" height="0" fill="#22D3EE"/>
-
-    <!-- Footer line -->
     <line x1="60" y1="548" x2="1120" y2="548" stroke="#1E293B" stroke-width="0.6"/>
     <text x="60" y="570" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="10" fill="#64748B">
       <tspan fill="#10B981">sai@github</tspan><tspan>:</tspan><tspan fill="#22D3EE">~</tspan><tspan>$ </tspan><tspan fill="#F8FAFC">echo "Thanks for visiting."</tspan>
