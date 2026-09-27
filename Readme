@@ -1,239 +1,231 @@
-<div align="center">
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="./dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="./light.svg">
-  <img src="./dark.svg" alt="K.R. Sai Varun — Full-Stack Developer and AI Application Builder. Terminal-style hero banner." width="100%">
+  <img src="./dark.svg" alt="K.R. Sai Varun — Full-Stack Developer building Django, React, and AI-powered applications" width="100%">
 </picture>
 
-<br/>
-
-<img src="https://readme-typing-svg.demolab.com?font=Space+Mono&weight=700&size=22&duration=3000&pause=800&color=00D9FF&center=true&vCenter=true&width=700&lines=Hey%2C+I'm+Sai+Varun;Full-Stack+Developer;Django+%E2%80%A2+React+%E2%80%A2+AI-Powered+Apps;Building+systems+that+ship" alt="Typing SVG" />
-
-<br/>
-
-<a href="https://www.linkedin.com/in/k-r-sai-varun-891788262/">
-  <img src="https://img.shields.io/badge/LinkedIn-Connect-0077B5?style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn">
-</a>
-&nbsp;
-<a href="https://github.com/KRSaiVarun">
-  <img src="https://img.shields.io/badge/GitHub-Follow-181717?style=flat-square&logo=github&logoColor=white" alt="GitHub">
-</a>
-&nbsp;
-<a href="mailto:krsaivarun@gmail.com">
-  <img src="https://img.shields.io/badge/Gmail-Contact-D14836?style=flat-square&logo=gmail&logoColor=white" alt="Email">
-</a>
-&nbsp;
-<img src="https://komarev.com/ghpvc/?username=KRSaiVarun&label=Profile+Views&color=00d9ff&style=flat-square" alt="Profile Views">
-
-</div>
+<p align="center">
+  <a href="https://www.linkedin.com/in/k-r-sai-varun-891788262/">
+    <img src="https://img.shields.io/badge/LinkedIn-Connect-0077B5?style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn">
+  </a>
+  &nbsp;
+  <a href="https://github.com/KRSaiVarun">
+    <img src="https://img.shields.io/badge/GitHub-Follow-181717?style=flat-square&logo=github&logoColor=white" alt="GitHub">
+  </a>
+  &nbsp;
+  <a href="mailto:krsaivarun@gmail.com">
+    <img src="https://img.shields.io/badge/Gmail-Contact-D14836?style=flat-square&logo=gmail&logoColor=white" alt="Email">
+  </a>
+  &nbsp;
+  <img src="https://img.shields.io/badge/Open%20To-Opportunities-00d9ff?style=flat-square" alt="Open to Opportunities">
+</p>
 
 ---
 
-## 👨‍💻 About Me
+## About Me
 
-I build **scalable full-stack applications** focused on performance, security, and real-world usability. My work spans **booking systems**, **AI-driven tools**, and **data dashboards** — with an emphasis on clean architecture and optimized backend logic.
+I build scalable full-stack applications focused on performance, security, and real-world usability. My work spans booking systems, AI-driven tools, and data dashboards — clean architecture and optimized backend logic aimed at solving real problems.
 
-- 🎓 **BCA Graduate** | Currently pursuing **MCA** in Bengaluru, India
+- 🎓 BCA graduate, currently pursuing an MCA in Bengaluru, India
 - 🛠 Comfortable across the full product lifecycle — from schema design to deployed UI
-- 🤖 Actively exploring **Machine Learning & NLP** to build smarter applications
-- 💡 I learn by shipping — every project is built end-to-end
+- 🤖 Exploring Machine Learning & NLP to build smarter applications
+- 💡 Focused on shipping working software, not just demos
 
 ---
 
-## 🎯 Engineering Focus
+## Engineering Focus
 
-```
-Backend       →  Django · Flask · REST APIs · JWT Authentication
-Frontend      →  React.js · Next.js · Tailwind CSS · HTML5 / CSS3
-Databases     →  PostgreSQL · MySQL · SQLite · Query Optimization
-AI / Data     →  NLP · Scikit-learn · Pandas · NumPy · PDF Analysis
-Tools         →  Git · GitHub · Postman · VS Code · Power BI
-```
-
----
-
-## 🚀 Currently Building
-
-> Full-stack applications · AI-powered tools
-
-Currently deepening my work in **TypeScript**, **AWS**, **Docker**, and **GraphQL** while continuing to ship full-stack projects.
+| Area | Focus |
+|---|---|
+| **Full-Stack Applications** | Frontend, API, and database layers working together end-to-end |
+| **Backend Architecture** | Django · Flask · REST APIs · JWT authentication |
+| **AI-Powered Applications** | NLP and ML-based tooling for document and data processing |
+| **Data Analytics** | SQL query optimization and interactive dashboards |
+| **Security Tooling** | Vulnerability scanning and secure API design |
 
 ---
 
-## 🌟 Featured Projects
+## Currently Building
+
+> AI-powered document processing tools · full-stack booking systems · data analytics dashboards · security automation utilities
+
+---
+
+## Technical Stack
+
+**Languages**
+
+![Python](https://img.shields.io/badge/Python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
+![JavaScript](https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E)
+![C](https://img.shields.io/badge/C-00599C?style=for-the-badge&logo=c&logoColor=white)
+![C++](https://img.shields.io/badge/C++-00599C?style=for-the-badge&logo=cplusplus&logoColor=white)
+![SQL](https://img.shields.io/badge/SQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
+
+**Web & Frameworks**
+
+![Django](https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=django&logoColor=white)
+![Flask](https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white)
+![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![Next.js](https://img.shields.io/badge/Next.js-black?style=for-the-badge&logo=next.js&logoColor=white)
+![Node.js](https://img.shields.io/badge/Node.js-6DA55F?style=for-the-badge&logo=nodedotjs&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![Bootstrap](https://img.shields.io/badge/Bootstrap-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white)
+
+**Databases & AI / Data**
+
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white)
+![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
+![SQLite](https://img.shields.io/badge/SQLite-07405E?style=for-the-badge&logo=sqlite&logoColor=white)
+![Pandas](https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)
+![Scikit-learn](https://img.shields.io/badge/scikit--learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white)
+
+**Tools**
+
+![Git](https://img.shields.io/badge/Git-F05033?style=for-the-badge&logo=git&logoColor=white)
+![GitHub](https://img.shields.io/badge/GitHub-121011?style=for-the-badge&logo=github&logoColor=white)
+![VS Code](https://img.shields.io/badge/VS_Code-0078D7?style=for-the-badge&logo=visual-studio-code&logoColor=white)
+![Postman](https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white)
+![Power BI](https://img.shields.io/badge/Power_BI-F2C811?style=for-the-badge&logo=powerbi&logoColor=black)
+
+---
+
+## Featured Projects
 
 ### ✈️ Vayu Vihar — Helicopter Booking System
 
-Full-stack booking system with JWT-secured authentication, dynamic seat management, and API-driven booking workflows.
+A full-stack helicopter booking platform with authentication, dynamic seat management, and booking-workflow APIs.
 
-- **Problem:** No streamlined, secure platform for helicopter booking with real-time user management.
-- **Solution:** Built an end-to-end reservation lifecycle — schema design, secured auth, booking API, and React-based UI.
-- **Stack:** Django · Flask · React · JWT · PostgreSQL
-- **Status:** Completed (per project repository)
+**Problem:** No streamlined, secure platform for helicopter booking with real-time user management.
 
-[![GitHub Repo](https://img.shields.io/badge/GitHub-Repo-181717?style=flat-square&logo=github)](https://github.com/KRSaiVarun/vayu-vihar)
+**Solution:** End-to-end reservation lifecycle — schema design, JWT-secured authentication, booking APIs, and a React-based UI.
+
+`Django` `Flask` `React` `JWT` `PostgreSQL`
+
+[GitHub Repository](https://github.com/KRSaiVarun/vayu-vihar)
 
 ---
 
 ### 📊 DataInsight Hub Pro — Analytics Dashboard
 
-Interactive dashboard for exploring large datasets with optimized SQL queries and real-time visual data exploration.
+An interactive analytics dashboard for exploring datasets and visualizing insights, built with an optimized SQL query layer.
 
-- **Problem:** Large datasets with slow, hard-to-read reports.
-- **Solution:** Optimized query layer + interactive React frontend for visual data exploration.
-- **Stack:** Python · Pandas · SQL · React
-- **Status:** Completed (per project repository)
+**Problem:** Large datasets with slow, hard-to-read reports.
 
-[![GitHub Repo](https://img.shields.io/badge/GitHub-Repo-181717?style=flat-square&logo=github)](https://github.com/KRSaiVarun/datainsight-hub)
+**Solution:** Query optimization and a React frontend for interactive visual data exploration.
+
+`Python` `Pandas` `SQL` `React`
+
+[GitHub Repository](https://github.com/KRSaiVarun/datainsight-hub)
 
 ---
 
 ### 📄 PDF Analysis Tool — AI Document Processor
 
-AI-powered extraction pipeline using NLP for structured data parsing from unstructured PDFs.
+An AI-assisted document processing tool designed to extract structured information from PDF files.
 
-- **Problem:** Manual PDF data extraction is slow and error-prone.
-- **Solution:** NLP-based extraction pipeline with Flask backend for structured output.
-- **Stack:** Python · NLP · Scikit-learn · Flask
-- **Status:** Completed (per project repository)
+**Problem:** Manual PDF data extraction is slow and error-prone.
 
-[![GitHub Repo](https://img.shields.io/badge/GitHub-Repo-181717?style=flat-square&logo=github)](https://github.com/KRSaiVarun/pdf-analysis-tool)
+**Solution:** An NLP-based extraction pipeline with a Flask backend for structured output.
+
+`Python` `NLP` `Scikit-learn` `Flask`
+
+[GitHub Repository](https://github.com/KRSaiVarun/pdf-analysis-tool)
 
 ---
 
 ### 🔐 CyberScan Pro — Security Vulnerability Scanner
 
-Automated scanner detecting common threat vectors with detailed report generation and remediation guidance.
+A Python-based security scanning tool that helps identify potential vulnerabilities and generate reports.
 
-- **Problem:** Developers lack accessible tools to audit their own apps for common vulnerabilities.
-- **Solution:** Automated scanner with extensible detection rules and actionable security reports.
-- **Stack:** Python · Flask · Security
-- **Status:** Completed (per project repository)
+**Problem:** Developers lack accessible tools to audit their own applications for common vulnerabilities.
 
-[![GitHub Repo](https://img.shields.io/badge/GitHub-Repo-181717?style=flat-square&logo=github)](https://github.com/KRSaiVarun/cyberscan-pro)
+**Solution:** An automated scanner with extensible detection rules and actionable remediation guidance.
+
+`Python` `Flask` `Security`
+
+[GitHub Repository](https://github.com/KRSaiVarun/cyberscan-pro)
 
 ---
 
 ### 🧭 CareerNavigator — AI Career Recommendation Platform
 
-ML-powered recommendation engine personalizing career suggestions based on skills and interests.
+An ML-based career recommendation prototype that uses skills and interests to generate career suggestions.
 
-- **Problem:** Students struggle to identify the right career path from available options.
-- **Solution:** ML-based recommendation engine with Flask API and interactive frontend.
-- **Stack:** Python · Scikit-learn · Flask
-- **Status:** Prototype
+**Problem:** Students struggle to identify suitable career paths from the options available to them.
 
-[![GitHub Repo](https://img.shields.io/badge/GitHub-Repo-181717?style=flat-square&logo=github)](https://github.com/KRSaiVarun/careernavigator)
+**Solution:** A recommendation engine with a Flask API and an interactive frontend.
 
----
+*Prototype stage.*
 
-## 🛠️ Technical Stack
+`Python` `Scikit-learn` `Flask`
 
-**Languages**
-
-![Python](https://img.shields.io/badge/Python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
-![JavaScript](https://img.shields.io/badge/JavaScript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
-![C](https://img.shields.io/badge/C-%2300599C.svg?style=for-the-badge&logo=c&logoColor=white)
-![C++](https://img.shields.io/badge/C++-%2300599C.svg?style=for-the-badge&logo=c%2B%2B&logoColor=white)
-![SQL](https://img.shields.io/badge/SQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
-
-**Web & Frameworks**
-
-![Django](https://img.shields.io/badge/Django-%23092E20.svg?style=for-the-badge&logo=django&logoColor=white)
-![Flask](https://img.shields.io/badge/Flask-%23000.svg?style=for-the-badge&logo=flask&logoColor=white)
-![React](https://img.shields.io/badge/React-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
-![Next.js](https://img.shields.io/badge/Next.js-black?style=for-the-badge&logo=next.js&logoColor=white)
-![NodeJS](https://img.shields.io/badge/Node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)
-![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
-![Bootstrap](https://img.shields.io/badge/Bootstrap-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white)
-
-**Databases & AI / Data**
-
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white)
-![MySQL](https://img.shields.io/badge/MySQL-4479A1.svg?style=for-the-badge&logo=mysql&logoColor=white)
-![SQLite](https://img.shields.io/badge/SQLite-%2307405e.svg?style=for-the-badge&logo=sqlite&logoColor=white)
-![Pandas](https://img.shields.io/badge/Pandas-%23150458.svg?style=for-the-badge&logo=pandas&logoColor=white)
-![Scikit-learn](https://img.shields.io/badge/scikit--learn-%23F7931E.svg?style=for-the-badge&logo=scikit-learn&logoColor=white)
-
-**Tools**
-
-![Git](https://img.shields.io/badge/Git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white)
-![GitHub](https://img.shields.io/badge/GitHub-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)
-![VS Code](https://img.shields.io/badge/VS%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white)
-![Postman](https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white)
-![Power BI](https://img.shields.io/badge/Power%20BI-F2C811?style=for-the-badge&logo=powerbi&logoColor=black)
+[GitHub Repository](https://github.com/KRSaiVarun/careernavigator)
 
 ---
 
-## 📈 GitHub Stats
+## GitHub Activity
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=KRSaiVarun&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=00d9ff&icon_color=00d9ff&text_color=ffffff" height="165" alt="GitHub Stats">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=KRSaiVarun&layout=compact&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=00d9ff&text_color=ffffff" height="165" alt="Top Languages">
+  <img
+    src="https://github-readme-stats.vercel.app/api?username=KRSaiVarun&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=00d9ff&icon_color=00d9ff&text_color=ffffff"
+    height="165"
+    alt="GitHub statistics"
+  />
+  <img
+    src="https://github-readme-stats.vercel.app/api/top-langs/?username=KRSaiVarun&layout=compact&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=00d9ff&text_color=ffffff"
+    height="165"
+    alt="Most used programming languages"
+  />
 </p>
 
 <p align="center">
-  <img src="https://github-readme-streak-stats.herokuapp.com?user=KRSaiVarun&theme=tokyonight&hide_border=true&background=0d1117&ring=00d9ff&fire=ff6b6b&currStreakLabel=00d9ff" alt="GitHub Streak">
+  <img
+    src="https://github-readme-streak-stats.herokuapp.com?user=KRSaiVarun&theme=tokyonight&hide_border=true&background=0d1117&ring=00d9ff&fire=ff6b6b&currStreakLabel=00d9ff"
+    alt="GitHub contribution streak"
+  />
 </p>
 
 ---
 
-## 🎓 Education
+## Certifications
 
-| Degree | Institution | Status |
-|--------|-------------|--------|
-| **MCA** | Bengaluru, India | Pursuing |
-| **BCA** | — | Completed |
-
----
-
-## 📜 Certifications
-
-- 🏢 **Accenture UK** — Developer & Technology Job Simulation (SDLC, Agile, Enterprise Dev)
-- 📜 **100xDevs** — JavaScript: Basics to Advanced
-- 📜 **Simplilearn** — JavaScript for Beginners
-- 🔐 **Simplilearn** — Introduction to Cyber Security
-- 🤖 **Simplilearn** — Introduction to Artificial Intelligence
+- **Accenture UK** — Developer & Technology Job Simulation (SDLC, Agile, Enterprise Development)
+- **100xDevs** — JavaScript: Basics to Advanced
+- **Simplilearn** — JavaScript for Beginners
+- **Simplilearn** — Introduction to Cyber Security
+- **Simplilearn** — Introduction to Artificial Intelligence
 
 ---
 
-## 📚 Currently Learning
+## Currently Learning
 
-<p align="left">
-  <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript">
-  <img src="https://img.shields.io/badge/AWS-232F3E?style=flat-square&logo=amazon-aws&logoColor=white" alt="AWS">
-  <img src="https://img.shields.io/badge/GraphQL-E10098?style=flat-square&logo=graphql&logoColor=white" alt="GraphQL">
-  <img src="https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white" alt="Docker">
-</p>
+`TypeScript` `AWS` `GraphQL` `Docker`
+
+Focus: Building more scalable, production-oriented systems.
 
 ---
 
-## 🤝 Connect
+## Open To
 
-<p align="center">
-  <a href="https://www.linkedin.com/in/k-r-sai-varun-891788262/">
-    <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn">
-  </a>
-  &nbsp;
-  <a href="https://github.com/KRSaiVarun">
-    <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub">
-  </a>
-  &nbsp;
-  <a href="mailto:krsaivarun@gmail.com">
-    <img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email">
-  </a>
-</p>
+💼 Internships & entry-level full-stack / backend roles
+
+🤝 Collaborating on web, AI, and open-source projects
 
 ---
 
-<div align="center">
+## Contact Terminal
 
-```
-sai@github:~$ echo "Thanks for visiting."
-> Let's build something meaningful together.
+```text
+sai@github:~$ connect
+
+GitHub    → github.com/KRSaiVarun
+LinkedIn  → linkedin.com/in/k-r-sai-varun-891788262
+Email     → krsaivarun@gmail.com
 ```
 
-<sub>⚡ Built with intention. Shipped with purpose.</sub>
+---
 
-</div>
+<p align="center">
+  <sub>~/profile $ echo "Thanks for visiting." — Let's build something meaningful together.</sub>
+</p>
