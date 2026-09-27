@@ -1,187 +1,268 @@
-<!-- NEW ENHANCEMENT DEFS -->
-<!-- Scanning laser gradient -->
-<linearGradient id="scanBeamGrad" x1="0" y1="0" x2="0" y2="1">
-  <stop offset="0%" stop-color="#0af0ff" stop-opacity="0"/>
-  <stop offset="50%" stop-color="#0af0ff" stop-opacity="0.25"/>
-  <stop offset="95%" stop-color="#7ff5ff" stop-opacity="0.9"/>
-  <stop offset="100%" stop-color="#ffffff" stop-opacity="1"/>
-</linearGradient>
+<svg width="1600" height="900" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="1600" y2="900" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#020C12"/>
+      <stop offset="0.5" stop-color="#021319"/>
+      <stop offset="1" stop-color="#010708"/>
+    </linearGradient>
 
-<!-- Shimmer reflection gradient -->
-<linearGradient id="hologramShimmer" x1="0" y1="0" x2="1" y2="1">
-  <stop offset="0%" stop-color="#0af0ff" stop-opacity="0"/>
-  <stop offset="45%" stop-color="#0af0ff" stop-opacity="0.03"/>
-  <stop offset="50%" stop-color="#7ff5ff" stop-opacity="0.15"/>
-  <stop offset="55%" stop-color="#0af0ff" stop-opacity="0.03"/>
-  <stop offset="100%" stop-color="#0af0ff" stop-opacity="0"/>
-</linearGradient>
+    <linearGradient id="cyanGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#5CF3FF"/>
+      <stop offset="0.5" stop-color="#1AD7FF"/>
+      <stop offset="1" stop-color="#00C9FF"/>
+    </linearGradient>
 
-<!-- Header laser beam gradient -->
-<linearGradient id="hdrSweepGrad" x1="0" y1="0" x2="1" y2="0">
-  <stop offset="0%" stop-color="#0af0ff" stop-opacity="0"/>
-  <stop offset="50%" stop-color="#7ff5ff" stop-opacity="0.8"/>
-  <stop offset="100%" stop-color="#0af0ff" stop-opacity="0"/>
-</linearGradient>
+    <linearGradient id="panelGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop stop-color="#071E29" stop-opacity="0.95"/>
+      <stop offset="1" stop-color="#041A22" stop-opacity="0.85"/>
+    </linearGradient>
 
-<!-- Radar sweep radial arc gradient -->
-<radialGradient id="radarSweepGrad" cx="50%" cy="50%" r="50%">
-  <stop offset="80%" stop-color="#0af0ff" stop-opacity="0"/>
-  <stop offset="98%" stop-color="#7ff5ff" stop-opacity="0.4"/>
-  <stop offset="100%" stop-color="#0af0ff" stop-opacity="0"/>
-</radialGradient>
+    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
 
-<style>
-  /* --- KEYFRAME ANIMATIONS --- */
-  @keyframes hudPulse {
-    0%, 100% { opacity: 0.9; filter: drop-shadow(0 0 2px #0af0ff); }
-    50% { opacity: 1; filter: drop-shadow(0 0 7px #7ff5ff); }
-  }
-  @keyframes headerScan {
-    0% { transform: translateX(-400px); opacity: 0; }
-    20% { opacity: 0.9; }
-    80% { opacity: 0.9; }
-    100% { transform: translateX(1600px); opacity: 0; }
-  }
-  @keyframes faceScanLoop {
-    0% { transform: translateY(-30px); opacity: 0; }
-    10% { opacity: 0.85; }
-    85% { opacity: 0.85; }
-    100% { transform: translateY(500px); opacity: 0; }
-  }
-  @keyframes shimmerMove {
-    0% { transform: translate(-300px, -300px); }
-    100% { transform: translate(300px, 300px); }
-  }
-  @keyframes rotateCW {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
-  }
-  @keyframes rotateCCW {
-    from { transform: rotate(360deg); }
-    to { transform: rotate(0deg); }
-  }
-  @keyframes glowBreath {
-    0%, 100% { opacity: 0.55; transform: scale(1); }
-    50% { opacity: 0.95; transform: scale(1.025); }
-  }
-  @keyframes gridDrift {
-    0% { transform: translateY(0px); }
-    100% { transform: translateY(40px); }
-  }
-  @keyframes flickerText {
-    0%, 100% { opacity: 1; }
-    92% { opacity: 1; }
-    93% { opacity: 0.45; }
-    94% { opacity: 1; }
-    97% { opacity: 0.8; }
-    98% { opacity: 0.3; }
-    99% { opacity: 1; }
-  }
-  @keyframes blinkStatus {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0.35; }
-  }
-  @keyframes particleFloat1 {
-    0% { transform: translateY(0px) translateX(0px); opacity: 0.2; }
-    50% { transform: translateY(-45px) translateX(15px); opacity: 0.75; }
-    100% { transform: translateY(-90px) translateX(0px); opacity: 0.2; }
-  }
-  @keyframes particleFloat2 {
-    0% { transform: translateY(0px) translateX(0px); opacity: 0.15; }
-    50% { transform: translateY(55px) translateX(-20px); opacity: 0.65; }
-    100% { transform: translateY(110px) translateX(0px); opacity: 0.15; }
-  }
-  @keyframes targetBrackets {
-    0%, 100% { transform: scale(1); opacity: 0.75; }
-    50% { transform: scale(1.015); opacity: 1; filter: drop-shadow(0 0 4px #0af0ff); }
-  }
-  @keyframes globePulse {
-    0%, 100% { opacity: 0.65; transform: scale(1); }
-    50% { opacity: 1; transform: scale(1.03); filter: drop-shadow(0 0 5px #0af0ff); }
-  }
-  @keyframes borderGlowPulse {
-    0%, 100% { stroke-opacity: 0.4; }
-    50% { stroke-opacity: 0.85; filter: drop-shadow(0 0 3px #12aebe); }
-  }
-  @keyframes textShimmerGlow {
-    0%, 100% { opacity: 0.75; }
-    50% { opacity: 1; filter: drop-shadow(0 0 3px #7ff5ff); }
-  }
+  <rect width="1600" height="900" fill="url(#bgGrad)"/>
 
-  /* Bar visualizer rhythm animation */
-  @keyframes bar1 { 0%, 100% { y2: 730; } 50% { y2: 690; } }
-  @keyframes bar2 { 0%, 100% { y2: 710; } 50% { y2: 745; } }
-  @keyframes bar3 { 0%, 100% { y2: 740; } 50% { y2: 685; } }
-  @keyframes bar4 { 0%, 100% { y2: 700; } 50% { y2: 735; } }
-  @keyframes bar5 { 0%, 100% { y2: 725; } 50% { y2: 675; } }
-  @keyframes bar6 { 0%, 100% { y2: 690; } 50% { y2: 740; } }
-  @keyframes bar7 { 0%, 100% { y2: 715; } 50% { y2: 670; } }
-  @keyframes bar8 { 0%, 100% { y2: 675; } 50% { y2: 720; } }
+  <!-- subtle grid -->
+  <g opacity="0.12">
+    <path d="M0 80H1600" stroke="#46F0FF" stroke-width="1"/>
+    <path d="M0 160H1600" stroke="#46F0FF" stroke-width="1"/>
+    <path d="M0 240H1600" stroke="#46F0FF" stroke-width="1"/>
+    <path d="M0 320H1600" stroke="#46F0FF" stroke-width="1"/>
+    <path d="M0 400H1600" stroke="#46F0FF" stroke-width="1"/>
+    <path d="M0 480H1600" stroke="#46F0FF" stroke-width="1"/>
+    <path d="M0 560H1600" stroke="#46F0FF" stroke-width="1"/>
+    <path d="M0 640H1600" stroke="#46F0FF" stroke-width="1"/>
+    <path d="M0 720H1600" stroke="#46F0FF" stroke-width="1"/>
+    <path d="M0 800H1600" stroke="#46F0FF" stroke-width="1"/>
+  </g>
 
-  /* Class assignment */
-  .anim-glow-breath {
-    transform-origin: 480px 450px;
-    animation: glowBreath 6s ease-in-out infinite;
-  }
-  .anim-flicker-title {
-    animation: flickerText 7s infinite, hudPulse 3s ease-in-out infinite;
-  }
-  .anim-radar-cw {
-    transform-origin: 480px 450px;
-    animation: rotateCW 10s linear infinite;
-  }
-  .anim-radar-ccw {
-    transform-origin: 480px 450px;
-    animation: rotateCCW 16s linear infinite;
-  }
-  .anim-corners {
-    transform-origin: 480px 450px;
-    animation: targetBrackets 3.5s ease-in-out infinite;
-  }
-  .anim-blink {
-    animation: blinkStatus 1.8s steps(2, start) infinite;
-  }
-  .anim-blink-fast {
-    animation: blinkStatus 0.9s steps(2, start) infinite;
-  }
-  .anim-header-sweep {
-    animation: headerScan 5.5s cubic-bezier(0.4, 0, 0.2, 1) infinite;
-  }
-  .anim-face-scan {
-    animation: faceScanLoop 4s ease-in-out infinite;
-  }
-  .anim-holo-shimmer {
-    animation: shimmerMove 6s linear infinite;
-  }
-  .anim-globe {
-    transform-origin: 95px 500px;
-    animation: globePulse 4s ease-in-out infinite;
-  }
-  .anim-border-pulse {
-    animation: borderGlowPulse 4s ease-in-out infinite;
-  }
-  .anim-text-pulse {
-    animation: textShimmerGlow 3s ease-in-out infinite;
-  }
+  <rect x="18" y="18" width="1564" height="864" rx="4" stroke="#31F4FF" stroke-width="3" fill="none"/>
+  <rect x="40" y="40" width="1520" height="820" rx="4" stroke="#1DAFDB" stroke-opacity=".5" fill="none"/>
 
-  /* Equalizer bars */
-  .vbar-1 { animation: bar1 1.2s ease-in-out infinite; }
-  .vbar-2 { animation: bar2 0.9s ease-in-out infinite; }
-  .vbar-3 { animation: bar3 1.4s ease-in-out infinite; }
-  .vbar-4 { animation: bar4 1.1s ease-in-out infinite; }
-  .vbar-5 { animation: bar5 1.5s ease-in-out infinite; }
-  .vbar-6 { animation: bar6 0.8s ease-in-out infinite; }
-  .vbar-7 { animation: bar7 1.3s ease-in-out infinite; }
-  .vbar-8 { animation: bar8 1.0s ease-in-out infinite; }
+  <!-- header -->
+  <rect x="40" y="40" width="1520" height="62" fill="#071A20" stroke="#2EF2FF" stroke-width="2"/>
+  <text x="80" y="81" fill="#E6FEFF" font-size="38" font-family="Orbitron, Arial, sans-serif" font-weight="900" letter-spacing="4">
+    VISUAL<span fill="#38EFFF">.MAP</span>
+  </text>
 
-  .p-float-1 { animation: particleFloat1 7s ease-in-out infinite; }
-  .p-float-2 { animation: particleFloat2 8.5s ease-in-out infinite; }
+  <text x="650" y="82" fill="#39F0FF" font-size="22" font-family="Orbitron, Arial, sans-serif" font-weight="700" letter-spacing="6">
+    // PROFILE.EXE
+  </text>
 
-  /* Reduced motion preferences */
-  @media (prefers-reduced-motion: reduce) {
-    *, .anim-radar-cw, .anim-radar-ccw, .anim-header-sweep, .anim-face-scan,
-    .anim-flicker-title, .vbar-1, .vbar-2, .vbar-3, .vbar-4, .vbar-5, .vbar-6, .vbar-7, .vbar-8 {
-      animation: none !important;
-    }
-  }
-</style>
+  <text x="1060" y="81" fill="#DDFEFF" font-size="17" font-family="Orbitron, Arial, sans-serif" letter-spacing="4">
+    2026.09.15  22:34:27
+  </text>
+
+  <!-- window controls -->
+  <g transform="translate(1460 58)">
+    <rect x="0" y="0" width="18" height="18" stroke="#39F0FF" fill="none"/>
+    <line x1="4" y1="12" x2="14" y2="12" stroke="#39F0FF"/>
+    <rect x="35" y="0" width="18" height="18" stroke="#39F0FF" fill="none"/>
+    <rect x="70" y="0" width="18" height="18" stroke="#39F0FF" fill="none"/>
+    <line x1="76" y1="4" x2="82" y2="10" stroke="#39F0FF"/>
+    <line x1="82" y1="4" x2="76" y2="10" stroke="#39F0FF"/>
+  </g>
+
+  <!-- left panel -->
+  <rect x="40" y="102" width="300" height="690" fill="url(#panelGrad)" stroke="#39F0FF" stroke-opacity=".6"/>
+  <line x1="340" y1="101" x2="340" y2="792" stroke="#39F0FF" stroke-opacity=".5"/>
+
+  <g transform="translate(70 150)">
+    <g fill="#39F0FF" font-family="Orbitron, Arial, sans-serif" font-size="20" font-weight="700" letter-spacing="3">
+      <text x="0" y="0">EXPLORE</text>
+      <text x="0" y="42">CLARITY</text>
+      <text x="0" y="84">BUILD</text>
+      <text x="0" y="126">IMPROVE</text>
+      <text x="0" y="168">REPEAT</text>
+    </g>
+  </g>
+
+  <!-- globe -->
+  <g transform="translate(60 260)">
+    <circle cx="128" cy="120" r="132" stroke="#39F0FF" stroke-width="3" fill="none"/>
+    <circle cx="128" cy="120" r="110" stroke="#39F0FF" stroke-opacity=".5" fill="none"/>
+    <circle cx="128" cy="120" r="92" stroke="#39F0FF" stroke-opacity=".4" fill="none"/>
+    <path d="M128 20V220M28 120H228" stroke="#39F0FF" stroke-opacity=".2"/>
+    <path d="M54 52C82 76 92 88 128 120C164 152 174 162 202 188" stroke="#39F0FF" stroke-opacity=".15" fill="none"/>
+    <path d="M54 188C82 162 96 152 128 120C160 88 174 75 202 52" stroke="#39F0FF" stroke-opacity=".15" fill="none"/>
+
+    <g fill="#39F0FF" font-family="Orbitron, Arial, sans-serif" font-size="18" letter-spacing="2">
+      <text x="-5" y="268">12.9716° N</text>
+      <text x="-10" y="294">77.5946° E</text>
+    </g>
+    <g fill="#39F0FF" font-family="Orbitron, Arial, sans-serif" font-size="18" letter-spacing="4">
+      <text x="12" y="338">BENGALURU</text>
+      <text x="8" y="360">INDIA</text>
+    </g>
+  </g>
+
+  <!-- waveform -->
+  <g transform="translate(98 515)">
+    <rect x="0" y="0" width="170" height="110" stroke="#39F0FF" stroke-opacity=".3" fill="none"/>
+    <g>
+      <rect x="10" y="60" width="8" height="20" fill="#39F0FF" opacity=".75"/>
+      <rect x="24" y="45" width="8" height="35" fill="#39F0FF" opacity=".75"/>
+      <rect x="38" y="52" width="8" height="28" fill="#39F0FF" opacity=".75"/>
+      <rect x="52" y="34" width="8" height="46" fill="#39F0FF" opacity=".75"/>
+      <rect x="66" y="50" width="8" height="30" fill="#39F0FF" opacity=".75"/>
+      <rect x="80" y="24" width="8" height="56" fill="#39F0FF" opacity=".75"/>
+      <rect x="94" y="14" width="8" height="66" fill="#39F0FF" opacity=".75"/>
+      <rect x="108" y="28" width="8" height="52" fill="#39F0FF" opacity=".75"/>
+      <rect x="122" y="18" width="8" height="62" fill="#39F0FF" opacity=".75"/>
+      <rect x="136" y="44" width="8" height="36" fill="#39F0FF" opacity=".75"/>
+      <rect x="150" y="58" width="8" height="22" fill="#39F0FF" opacity=".75"/>
+    </g>
+  </g>
+
+  <!-- scan mode -->
+  <g transform="translate(68 635)">
+    <text x="0" y="0" fill="#39F0FF" font-size="20" font-family="Orbitron, Arial, sans-serif" letter-spacing="3" font-weight="700">SCAN MODE</text>
+    <g fill="#39F0FF" font-size="15" font-family="Orbitron, Arial, sans-serif" letter-spacing="2">
+      <text x="0" y="36">> FACE RECOGNITION</text>
+      <text x="0" y="66">> ID CONFIRMED</text>
+      <text x="0" y="96">> PROFILE LOADED</text>
+      <text x="0" y="126">> ALL SYSTEMS ONLINE</text>
+    </g>
+  </g>
+
+  <!-- center profile -->
+  <g transform="translate(410 155)">
+    <circle cx="280" cy="245" r="250" stroke="#39F0FF" stroke-width="4" fill="none" filter="url(#glow)"/>
+    <circle cx="280" cy="245" r="220" stroke="#39F0FF" stroke-opacity=".55" fill="none"/>
+    <circle cx="280" cy="245" r="200" stroke="#39F0FF" stroke-opacity=".4" fill="none"/>
+
+    <g transform="translate(90 34)">
+      <path d="M190 190C210 128 256 94 314 94C352 94 388 110 418 144C390 118 366 110 330 110C286 110 246 124 190 190Z" fill="#121F28"/>
+      <path d="M220 170C248 134 290 126 332 132C378 140 416 170 424 214C390 176 351 164 318 166C286 168 254 176 220 170Z" fill="#1A2D35"/>
+      <path d="M200 140C224 86 274 66 322 72C382 80 1023 110 196 132C214 196 190 240 194 318C198 396 216 450 250 500C199 484 178 450 174 408C168 344 176 212 200 140Z" fill="#0C1E24" opacity=".1"/>
+      <path d="M230 246C228 212 244 176 270 160C300 142 336 142 366 156C402 172 428 210 434 250C438 296 428 348 406 392C380 386 350 372 330 346C312 322 300 296 290 266C282 240 266 218 230 246Z" fill="#0A1E25" opacity=".95"/>
+      <path d="M246 214C266 198 290 188 320 188C350 188 374 198 392 218C378 204 348 216 330 240C308 268 288 298 282 332C268 306 256 278 246 214Z" fill="#1C2D35" opacity=".9"/>
+    </g>
+  </g>
+
+  <!-- name banner -->
+  <g transform="translate(395 692)">
+    <rect x="0" y="0" width="420" height="58" fill="#071B22" stroke="#39F0FF" stroke-width="2"/>
+    <text x="210" y="39" fill="#DDFEFF" font-size="30" font-family="Orbitron, Arial, sans-serif" font-weight="900" text-anchor="middle" letter-spacing="7">
+      K.R. SAI VARUN
+    </text>
+  </g>
+
+  <!-- right panel -->
+  <rect x="1040" y="102" width="520" height="690" fill="url(#panelGrad)" stroke="#39F0FF" stroke-opacity=".6"/>
+  <line x1="1040" y1="102" x2="1560" y2="102" stroke="#39F0FF" stroke-opacity=".4"/>
+  <line x1="1039" y1="102" x2="1039" y2="792" stroke="#39F0FF" stroke-opacity=".5"/>
+
+  <g transform="translate(1080 145)">
+    <text x="0" y="0" fill="#39F0FF" font-size="22" font-family="Orbitron, Arial, sans-serif" letter-spacing="3" font-weight="700">SYSTEM CODE</text>
+
+    <text x="0" y="65" fill="#DDFEFF" font-size="32" font-family="Orbitron, Arial, sans-serif" font-weight="800" letter-spacing="3">K.R. SAI VARUN</text>
+
+    <g transform="translate(0 103)">
+      <circle cx="12" cy="12" r="9" stroke="#39F0FF" fill="none"/>
+      <circle cx="12" cy="12" r="4" fill="#39F0FF"/>
+      <text x="32" y="20" fill="#DDFEFF" font-size="26" font-family="Rajdhani, Arial, sans-serif">Bengaluru, India</text>
+    </g>
+
+    <g transform="translate(0 165)">
+      <text x="0" y="0" fill="#DDFEFF" font-size="24" font-family="Rajdhani, Arial, sans-serif">
+        Developer passionate about building scalable applications, working with data, and exploring AI/ML &amp; NLP to solve real-world problems.
+      </text>
+    </g>
+
+    <g transform="translate(0 248)">
+      <rect x="0" y="0" width="138" height="38" fill="#071A20" stroke="#39F0FF" stroke-width="2"/>
+      <text x="69" y="26" fill="#39F0FF" font-size="15" font-family="Orbitron, Arial, sans-serif" text-anchor="middle" letter-spacing="2">DEVELOPER</text>
+
+      <rect x="150" y="0" width="116" height="38" fill="#071A20" stroke="#39F0FF" stroke-width="2"/>
+      <text x="208" y="26" fill="#39F0FF" font-size="15" font-family="Orbitron, Arial, sans-serif" text-anchor="middle" letter-spacing="2">PYTHONISTA</text>
+
+      <rect x="278" y="0" width="122" height="38" fill="#071A20" stroke="#39F0FF" stroke-width="2"/>
+      <text x="339" y="26" fill="#39F0FF" font-size="15" font-family="Orbitron, Arial, sans-serif" text-anchor="middle" letter-spacing="2">AI EXPLORER</text>
+    </g>
+
+    <g transform="translate(0 302)">
+      <rect x="0" y="0" width="150" height="38" fill="#071A20" stroke="#39F0FF" stroke-width="2"/>
+      <text x="75" y="26" fill="#39F0FF" font-size="15" font-family="Orbitron, Arial, sans-serif" text-anchor="middle" letter-spacing="2">PROBLEM SOLVER</text>
+
+      <rect x="175" y="0" width="170" height="38" fill="#071A20" stroke="#39F0FF" stroke-width="2"/>
+      <text x="260" y="26" fill="#39F0FF" font-size="15" font-family="Orbitron, Arial, sans-serif" text-anchor="middle" letter-spacing="2">LIFELONG LEARNER</text>
+    </g>
+  </g>
+
+  <!-- tech stack -->
+  <g transform="translate(1080 520)">
+    <text x="0" y="0" fill="#39F0FF" font-size="22" font-family="Orbitron, Arial, sans-serif" letter-spacing="3" font-weight="700">TECH STACK</text>
+
+    <g transform="translate(0 32)">
+      <rect x="0" y="0" width="118" height="94" fill="#081B22" stroke="#39F0FF" stroke-width="2"/>
+      <text x="59" y="40" fill="#39F0FF" font-size="30" font-family="Orbitron, Arial, sans-serif" text-anchor="middle">P</text>
+      <text x="59" y="68" fill="#DDFEFF" font-size="18" font-family="Orbitron, Arial, sans-serif" text-anchor="middle" letter-spacing="2">PYTHON</text>
+
+      <rect x="134" y="0" width="118" height="94" fill="#081B22" stroke="#39F0FF" stroke-width="2"/>
+      <text x="193" y="40" fill="#39F0FF" font-size="26" font-family="Orbitron, Arial, sans-serif" text-anchor="middle">dj</text>
+      <text x="193" y="68" fill="#DDFEFF" font-size="18" font-family="Orbitron, Arial, sans-serif" text-anchor="middle" letter-spacing="2">DJANGO</text>
+
+      <rect x="268" y="0" width="118" height="94" fill="#081B22" stroke="#39F0FF" stroke-width="2"/>
+      <text x="327" y="40" fill="#39F0FF" font-size="24" font-family="Orbitron, Arial, sans-serif" text-anchor="middle">SQL</text>
+      <text x="327" y="68" fill="#DDFEFF" font-size="14" font-family="Orbitron, Arial, sans-serif" text-anchor="middle" letter-spacing="2">POSTGRESQL</text>
+
+      <rect x="402" y="0" width="118" height="94" fill="#081B22" stroke="#39F0FF" stroke-width="2"/>
+      <text x="461" y="40" fill="#39F0FF" font-size="22" font-family="Orbitron, Arial, sans-serif" text-anchor="middle">NLP</text>
+      <text x="461" y="68" fill="#DDFEFF" font-size="18" font-family="Orbitron, Arial, sans-serif" text-anchor="middle" letter-spacing="2">NLP</text>
+    </g>
+  </g>
+
+  <!-- core stacks -->
+  <g transform="translate(1080 668)">
+    <text x="0" y="0" fill="#39F0FF" font-size="22" font-family="Orbitron, Arial, sans-serif" letter-spacing="3" font-weight="700">CORE STACKS</text>
+
+    <g transform="translate(0 28)" font-family="Rajdhani, Arial, sans-serif" font-size="24" fill="#DDFEFF">
+      <g transform="translate(0 0)">
+        <text x="0" y="20">Python</text>
+        <rect x="170" y="0" width="240" height="18" fill="#061A1F" stroke="#39F0FF" stroke-width="1.5"/>
+        <rect x="170" y="0" width="236" height="18" fill="url(#cyanGrad)" opacity=".9"/>
+        <text x="430" y="20" fill="#DDFEFF">98.42%</text>
+      </g>
+
+      <g transform="translate(0 48)">
+        <text x="0" y="20">Django</text>
+        <rect x="170" y="0" width="240" height="18" fill="#061A1F" stroke="#39F0FF" stroke-width="1.5"/>
+        <rect x="170" y="0" width="13" height="18" fill="url(#cyanGrad)" opacity=".9"/>
+        <text x="430" y="20" fill="#DDFEFF">5.50%</text>
+      </g>
+
+      <g transform="translate(0 96)">
+        <text x="0" y="20">PostgreSQL</text>
+        <rect x="170" y="0" width="240" height="18" fill="#061A1F" stroke="#39F0FF" stroke-width="1.5"/>
+        <rect x="170" y="0" width="2" height="18" fill="url(#cyanGrad)" opacity=".9"/>
+        <text x="430" y="20" fill="#DDFEFF">0.75%</text>
+      </g>
+
+      <g transform="translate(0 144)">
+        <text x="0" y="20">NLP</text>
+        <rect x="170" y="0" width="240" height="18" fill="#061A1F" stroke="#39F0FF" stroke-width="1.5"/>
+        <rect x="170" y="0" width="1" height="18" fill="url(#cyanGrad)" opacity=".9"/>
+        <text x="430" y="20" fill="#DDFEFF">0.15%</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- footer -->
+  <rect x="40" y="798" width="1520" height="62" fill="#071A20" stroke="#39F0FF" stroke-width="2"/>
+  <text x="64" y="842" fill="#DDFEFF" font-size="22" font-family="Orbitron, Arial, sans-serif" letter-spacing="4">
+    VISUAL.MAP
+  </text>
+  <text x="900" y="842" fill="#39F0FF" font-size="18" font-family="Orbitron, Arial, sans-serif" letter-spacing="4">
+    v1.0.0
+  </text>
+  <text x="1170" y="842" fill="#39F0FF" font-size="18" font-family="Orbitron, Arial, sans-serif" letter-spacing="4">
+    // BUILDING A SMARTER TOMORROW...
+  </text>
+</svg>
